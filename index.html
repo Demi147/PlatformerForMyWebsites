@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | My mini web game</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="../CssandJS/bootstrap/css/bootstrap.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/0.02.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm bg-dark sticky-top navbar-dark">
+      <a class="navbar-brand" href="../index.html">Home</a>
+    </nav>
+
+    <div class="container">
+      <p>My little webgl game i made as an example.</p>
+    </div>
+
+    <div class="container"> 
+      <div>
+        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer">
+        <button class="btn-dark" onclick="unityInstance.SetFullscreen(1)">Go Fullscreen</button>
+      </div>
+    </div>
+
+    <br>
+    <div class="container" style="background-color:#e5e5e5">
+      <div class="row">
+        <div class="col-8">
+          <h4>About:</h4>
+          <p>I made this game as a quick demonstration of my skill with the unity engine.
+            <br>
+            I will be updating the game as i work on it.
+          </p>
+        </div>
+        <div class="col-4">
+          <h3>Controls</h3>
+          <ul>
+            <li>Move: A and D or left and right arrow keys</li>
+            <li>Jump: Space</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-sm" style="background-color:#c6c6c6">
+      Made with...
+      <img style="width: 200px;" src="TemplateData/webgl-logo.png">
+    </div>
+
+  </body>
+</html>
